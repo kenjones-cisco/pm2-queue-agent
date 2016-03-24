@@ -1,0 +1,33 @@
+{
+  "name": "pm2-queue-agent",
+  "version": "1.0.0",
+  "description": "PM2 Queue Agent Module",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kenjones-cisco/pm2-queue-agent.git"
+  },
+  "dependencies": {
+    "bluebird": "^3.0.0",
+    "cote": "^0.8.1",
+    "lodash": "^3.0.0",
+    "pmx": "^0.6.1",
+    "pm2": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.0"
+  },
+  "config": {
+    "http_port": 9808
+  },
+  "apps": [{
+    "merge_logs": true,
+    "max_memory_restart": "200M",
+    "script": "app.js"
+  }],
+  "author": "Kenny Jones",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint *.js lib"
+  }
+}
